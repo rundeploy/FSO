@@ -7,7 +7,8 @@
 
 #include "disk.h"
 
-#define DISK_MAGIC 0xdeadbeef
+//#define DISK_MAGIC 0xdeadbeef
+#define FS_MAGIC           0xf0f03410
 
 static FILE *diskfile;
 static int nblocks=0;

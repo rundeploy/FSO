@@ -3,7 +3,7 @@ all: fs-miei01
 
 
 fs-miei01: shell.o fs.o disk.o
-	gcc -g shell.o fs.o disk.o -lm -o fs-miei01
+	gcc -g shell.o fs.o disk.o -lm -o fs
 
 shell.o: shell.c
 	gcc -Wall shell.c -c -o shell.o -g
