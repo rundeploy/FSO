@@ -31,7 +31,7 @@ int main( int argc, char *argv[] )
 	printf("opened emulated disk image %s with %d blocks\n",argv[1],disk_size());
 
 	while(1) {
-		printf(" miei01> ");
+		printf(" prompt> ");
 		fflush(stdout);
 
 		if(!fgets(line,sizeof(line),stdin)) break;
@@ -84,7 +84,7 @@ int main( int argc, char *argv[] )
 		} else if(!strcmp(cmd,"create")) {
 			if(args==1) {
 				inumber = fs_create();
-				if(inumber>0) {
+				if(inumber>=0) {
 					printf("created inode %d\n",inumber);
 				} else {
 					printf("create failed!\n");
